@@ -76,15 +76,15 @@ public class ControladorMatricula extends HttpServlet {
             String s_semestre = request.getParameter("f_semestre");
             String s_ciclo = request.getParameter("f_ciclo");
             String s_estado = request.getParameter("f_estado");
-            int s_idestudiante = request.getParameter("f_idestudiante");
-            int s_idcurso = request.getParameter("f_idcurso");
-            int s_idcarrera = request.getParameter("f_idcarrera");
+            String s_idestudiante = request.getParameter("f_idestudiante");
+            String s_idcurso = request.getParameter("f_idcurso");
+            String s_idcarrera = request.getParameter("f_idcarrera");
             matricula.setSemestre(s_semestre);
             matricula.setCiclo(s_ciclo);
             matricula.setEstado(s_estado);
-            matricula.setIdEstudiante(s_idestudiante);
-            matricula.setIdCurso(s_idcurso);
-            matricula.setIdCarrera(s_idcarrera);
+            matricula.setIdestudiante(Integer.valueOf(s_idestudiante));
+            matricula.setIdcurso(Integer.valueOf(s_idcurso));
+            matricula.setIdcarrera(Integer.valueOf(s_idcarrera));
             matriculaDAO.agregarmatricula(matricula);
             acceso = listarmatricula;
             
@@ -99,13 +99,13 @@ public class ControladorMatricula extends HttpServlet {
             String s_codigo = request.getParameter("f_codigo");
             String s_estado = request.getParameter("f_estado");
             
-            matricula.setIdmatriculae(s_idmatricula);            
+            matricula.setIdmatricula(s_idmatricula);            
             matricula.setNombre(s_nombre);
             matricula.setApellidos(s_apellidos);
             matricula.setDni(s_dni);
             matricula.setCodigo(s_codigo);
             matricula.setEstado(s_estado);
-            matricula.editarmatricula(matricula);
+            matriculaDAO.editarmatricula(matricula);
             acceso = listarmatricula;
         }else if (s_accion.equals("eliminarmatricula")) {
             int s_idmatricula = Integer.valueOf(request.getParameter("f_idmatricula"));
