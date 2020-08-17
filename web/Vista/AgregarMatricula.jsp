@@ -52,15 +52,15 @@
                             <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
                         </tr>
                         <tr>
-                            <td class="text-right">Idestudiante</td>
+                            <td class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idestudiante</td>
                             <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
                         </tr>
                         <tr>
-                            <td class="text-right">Idcurso</td>
+                            <td class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idcurso</td>
                             <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
                         </tr>
                         <tr>
-                            <td class="text-right">Idcarrera</td>
+                            <td class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idcarrera</td>
                             <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
                         </tr>
                         <tr>
