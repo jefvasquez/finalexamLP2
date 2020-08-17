@@ -28,11 +28,12 @@ public class MatriculaDAO implements CRUDMatricula{
             while (rs.next()) {
                 Matricula matricula = new Matricula();
                 matricula.setIdmatricula(rs.getInt("idmatricula"));
-                matricula.setNombre(rs.getString("nombre"));
-                matricula.setApellidos(rs.getString("apellidos"));
-                matricula.setDni(rs.getString("dni"));
-                matricula.setCodigo(rs.getString("codigo"));
+                matricula.setSemestre(rs.getString("semestre"));
+                matricula.setCiclo(rs.getString("ciclo"));
                 matricula.setEstado(rs.getString("estado"));
+                matricula.setIdestudiante(rs.getInt("idestudiante"));
+                matricula.setIdcurso(rs.getInt("idcurso"));
+                matricula.setIdcarrera(rs.getInt("idcarrera"));
                 matriculas.add(matricula);
             }
         } catch (Exception e) {
@@ -44,7 +45,10 @@ public class MatriculaDAO implements CRUDMatricula{
     @Override
     public Matricula buscarmatricula(int idmatricula) {
         String consulta = " select *  "
-                        + " from matricula  "
+                        + " from matricula "
+                + "inner join estudiante on matricula.idestudiante = estudiante.idestudiante and "+
+                " inner join curso on matricula.idcurso = curso.idcurso and "
+                //+ "inner join carrera on matricula.idcarrera = carrera.idcarrera"
                         + " where idmatricula = " + idmatricula + " ;";
         try {
             con = cn.getConnection();
@@ -52,11 +56,13 @@ public class MatriculaDAO implements CRUDMatricula{
             rs = pst.executeQuery();
             while (rs.next()) {
                 e.setIdmatricula(rs.getInt("idmatricula"));
-                e.setNombre(rs.getString("nombre"));
-                e.setApellidos(rs.getString("apellidos"));
-                e.setDni(rs.getString("dni"));
-                e.setCodigo(rs.getString("codigo"));
+                e.setSemestre(rs.getString("semestre"));
+                e.setCiclo(rs.getString("ciclo"));
                 e.setEstado(rs.getString("estado"));
+                e.setIdestudiante(rs.getInt("idestudiante"));
+                e.setIdcurso(rs.getInt("idcurso"));
+                e.setIdcarrera(rs.getInt("idcarrera"));
+                
             }
         } catch (Exception e) {
         }
@@ -66,13 +72,14 @@ public class MatriculaDAO implements CRUDMatricula{
 
     @Override
     public boolean agregarmatricula(Matricula matricula) {
-        String consulta = " insert into matricula(nombre, apellidos, dni, codigo, estado)  "
+        String consulta = " insert into matricula(semestre, ciclo, estado, idestudiante, idcurso, idcarrera)  "
                         + " values( "
-                        + "'"+ matricula.getNombre() +"', "
-                        + "'"+ matricula.getApellidos() +"', "
-                        + "'"+ matricula.getDni() +"', "
-                        + "'"+ matricula.getCodigo() +"', "
-                        + "'"+ matricula.getEstado() +"') ";
+                        + "'"+ matricula.getSemestre() +"', "
+                        + "'"+ matricula.getCiclo() +"', "
+                        + "'"+ matricula.getEstado() +"', "
+                        + "'"+ matricula.getIdestudiante() +"', "
+                        + "'"+ matricula.getIdcurso() +"', "
+                        + "'"+ matricula.getIdcarrera() +"') ";
         try {
             con = cn.getConnection();
             pst = con.prepareStatement(consulta);
@@ -86,11 +93,12 @@ public class MatriculaDAO implements CRUDMatricula{
     public boolean editarmatricula(Matricula matricula) {
         String consulta = " update matricula "
                         + " set "
-                        + " nombre = '"+ matricula.getNombre() +"', "
-                        + " apellidos = '"+ matricula.getApellidos() +"', "
-                        + " dni = '"+ matricula.getDni() +"', "
-                        + " codigo = '"+ matricula.getCodigo() +"', "
-                        + " estado = '"+ matricula.getEstado() +"' "
+                        + " matricula = '"+ matricula.getSemestre() +"', "
+                        + " ciclo = '"+ matricula.getCiclo() +"', "
+                        + " estado = '"+ matricula.getEstado() +"', "
+                        + " idestudiante = '"+ matricula.getIdestudiante() +"', "
+                        + " idcurso = '"+ matricula.getIdcurso() +"' "
+                        + " idcarrera = '"+ matricula.getIdcarrera() +"' "
                         + " where "
                         + " idmatricula = " + matricula.getIdmatricula() + "; ";
         try {

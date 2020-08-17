@@ -5,11 +5,6 @@ public class Matricula {
     private int idestudiante;
     private int idcurso;
     private int idcarrera;
-    private String nombre;
-    private String apellidos;
-    private String dni;
-    private String codigo;
-    private String direccion;
 
     public int getIdestudiante() {
         return idestudiante;
@@ -57,13 +52,14 @@ public class Matricula {
     public Matricula() {
     }
 
-    public Matricula(int idmatricula, String nombre, String apellidos, String dni, String codigo, String estado) {
+    public Matricula(int idmatricula, String semestre, String ciclo, String estado, int idestudiante, int idcurso, int idcarrera) {
         this.idmatricula = idmatricula;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.dni = dni;
-        this.codigo = codigo;
+        this.semestre = semestre;
+        this.ciclo = ciclo;
         this.estado = estado;
+        this.idestudiante = idestudiante;
+        this.idcurso = idcurso;
+         this.idcarrera = idcarrera;
     }
 
     public String getEstado() {
@@ -82,45 +78,7 @@ public class Matricula {
         this.idmatricula = idmatricula;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-    
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
+   
     
     
     
