@@ -52,10 +52,10 @@
                         <td><% out.print(estudiante.getCodigo()); %></td>
                         <td><% out.print(estudiante.getEstado()); %></td>
                         <td>
-                            <a class="btn btn-warning" href="Controlador?f_accion=editarestudiante01&f_idestudiante=<% out.print(estudiante.getIdestudiante()); %>">
+                            <a class="btn btn-warning" href="ControladorEstudiantes?f_accion=editarestudiante01&f_idestudiante=<% out.print(estudiante.getIdestudiante()); %>">
                                 Editar
                             </a>
-                            <a class="btn btn-danger" href="Controlador?f_accion=eliminarestudiante&f_idestudiante=<% out.print(estudiante.getIdestudiante()); %>">
+                            <a class="btn btn-danger" href="ControladorEstudiantes?f_accion=eliminarestudiante&f_idestudiante=<% out.print(estudiante.getIdestudiante()); %>">
                                 Eliminar
                             </a>
                         </td>

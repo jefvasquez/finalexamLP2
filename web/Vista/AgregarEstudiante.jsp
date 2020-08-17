@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-            <form name="AgregarEstudianteForm" action="Controlador" method="get">
+            <form name="AgregarEstudianteForm" action="ControladorEstudiantes" method="get">
                 <table  class="table">
                     <thead>
                         <tr>
