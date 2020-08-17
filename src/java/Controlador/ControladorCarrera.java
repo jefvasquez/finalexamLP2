@@ -39,10 +39,10 @@ public class ControladorCarrera extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ControladorCursos</title>");            
+            out.println("<title>Servlet ControladorCarrera</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ControladorCursos at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ControladorCarrera at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -68,10 +68,8 @@ public class ControladorCarrera extends HttpServlet {
             acceso = agregarcarrera;
         }else if (s_accion.equalsIgnoreCase("agregarcarrera002")) {
             String s_nombre = request.getParameter("f_nombre");
-           
             String s_estado = request.getParameter("f_estado");
             carrera.setNombre(s_nombre);
-            
             carrera.setEstado(s_estado);
             carreraDAO.agregarcarrera(carrera);
             acceso = listarcarrera;
@@ -82,16 +80,14 @@ public class ControladorCarrera extends HttpServlet {
         }else if (s_accion.equalsIgnoreCase("editarcarrera02")) {
             int s_idcarrera = Integer.valueOf(request.getParameter("f_idcarrera"));
             String s_nombre = request.getParameter("f_nombre");
-           
             String s_estado = request.getParameter("f_estado");
             
             carrera.setIdcarrera(s_idcarrera);            
             carrera.setNombre(s_nombre);
-            
             carrera.setEstado(s_estado);
-           carreraDAO.editarcarrera(carrera);
+            carreraDAO.editarcarrera(carrera);
             acceso = listarcarrera;
-        }else if (s_accion.equals("eliminarcurso")) {
+        }else if (s_accion.equals("eliminarcarrera")) {
             int s_idcarrera = Integer.valueOf(request.getParameter("f_idcarrera"));
             carreraDAO.eliminarcarrera(s_idcarrera);
             acceso = listarcarrera;

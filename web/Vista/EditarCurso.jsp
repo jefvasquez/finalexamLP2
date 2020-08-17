@@ -28,8 +28,8 @@
                     <li class="nav-item active">
                       <a class="nav-link" href="ControladorCursos?f_accion=listarcurso">Cursos <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Carreras</a>
+                   <li class="nav-item  active">
+                     <a class="nav-link" href="ControladorCarrera?f_accion=listarcarrera">Carrera<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Matricula</a>
