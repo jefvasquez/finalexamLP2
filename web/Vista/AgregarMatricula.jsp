@@ -18,7 +18,7 @@
                       <a class="nav-link" href="ControladorEstudiantes?f_accion=listarestudiante">Estudiantes</a>
                     </li>
                     <li class="nav-item active">
-                      <a class="nav-link" href="ControladorCursos?f_accion=listarcurso">Cursos  <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="ControladorCursos?f_accion=listarcurso">Cursos<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item  active">
                      <a class="nav-link" href="ControladorCarrera?f_accion=listarcarrera">Carrera<span class="sr-only">(current)</span></a>

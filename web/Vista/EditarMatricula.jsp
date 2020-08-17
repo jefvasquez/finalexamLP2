@@ -38,11 +38,11 @@
                 int s_idestudiante = Integer.valueOf(request.getParameter("f_idestudiante"));
                 Estudiante estudiante = (Estudiante)estudianteDAO.buscarestudiante(s_idestudiante);
             %>
-            <form name="EditarEstudianteForm" action="ControladorEstudiantes" method="get">
+            <form name="EditarMatriculaForm" action="ControladorMatricula" method="get">
                 <table  class="table">
                     <thead>
                         <tr>
-                            <th class="text-center" colspan="2">Editar Estudiante</th>                            
+                            <th class="text-center" colspan="2">Editar Matricula</th>                            
                         </tr>
                     </thead>
                     <tbody>
