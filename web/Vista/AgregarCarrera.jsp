@@ -24,7 +24,7 @@
                      <a class="nav-link" href="ControladorCarrera?f_accion=listarcarrera">Carrera<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Matricula</a>
+                      <a class="nav-link" href="ControladorMatricula?f_accion=listarmatricula">Matricula<span class="sr-only">(current)</span></a>
                     </li>
                   </ul>
                 </div>

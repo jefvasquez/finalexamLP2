@@ -1,9 +1,3 @@
-<%-- 
-    Document   : AgregarCurso
-    Created on : 16/08/2020, 10:57:57 PM
-    Author     : jeferson
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -26,8 +20,8 @@
                     <li class="nav-item active">
                       <a class="nav-link" href="ControladorCursos?f_accion=listarcurso">Cursos  <span class="sr-only">(current)</span></a>
                     </li>
-                   <li class="nav-item active">
-                      <a class="nav-link" href="ControladorCarrera?f_accion=listarcarrera">Carreras  <span class="sr-only">(current)</span></a>
+                    <li class="nav-item  active">
+                     <a class="nav-link" href="ControladorCarrera?f_accion=listarcarrera">Carrera<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="ControladorMatricula?f_accion=listarmatricula">Matricula<span class="sr-only">(current)</span></a>
@@ -36,34 +30,43 @@
                 </div>
               </nav>
         <div class="container">
-            <form name="AgregarCursoForm" action="ControladorCursos" method="get">
+            <form name="AgregarMatriculaForm" action="ControladorMatricula" method="get">
                 <table  class="table">
                     <thead>
                         <tr>
-                            <th class="text-center" colspan="2">Agregar Curso</th>                            
+                            <th class="text-center" colspan="2">Agregar Matricula</th>                            
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-right">Nombre</td>
+                            <td class="text-right">Semestre</td>
                             <td><input class="form-control" type="text" name="f_nombre" value="" maxlength="30" size="20" /></td>
                         </tr>
+                        
                         <tr>
-                            <td class="text-right">Horas</td>
-                            <td><input class="form-control" type="text" name="f_horas" value="" maxlength="2" size="2" /></td>
-                        </tr>
-                        <tr>
-                            <td class="text-right">Creditos</td>
-                            <td><input class="form-control" type="text" name="f_creditos" value="" maxlength="2" size="2" /></td>
+                            <td class="text-right">Ciclo</td>
+                            <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
                         </tr>
                         <tr>
                             <td class="text-right">Estado</td>
                             <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
                         </tr>
                         <tr>
+                            <td class="text-right">Idestudiante</td>
+                            <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Idcurso</td>
+                            <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Idcarrera</td>
+                            <td><input class="form-control" type="text" name="f_estado" value="" maxlength="1" size="2" /></td>
+                        </tr>
+                        <tr>
                             <td colspan="2" class="text-center">
-                                <input class="btn-primary" type="submit" value="Agregar Curso" name="agregar" />
-                                <input type="hidden" value="agregarcurso02" name="f_accion"/>
+                                <input class="btn-primary" type="submit" value="Agregar Matricula" name="agregar" />
+                                <input type="hidden" value="agregarmatricula02" name="f_accion"/>
                                     
                             </td>
                         </tr>
